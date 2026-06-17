@@ -14,10 +14,10 @@
       "target": "nsis"
     }
   },
-  "description": "",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "description": "A desktop application for meal planning and management",
+  "keywords": ["meal", "calendar", "planner", "electron"],
+  "author": "Muhib",
+  "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
     "electron": "^42.4.1",
