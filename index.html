@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Meal Calendar 1.0</title>
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+<div class="container">
+    <h2>Meal Calendar</h2>
+
+    <div class="selectors">
+        <select id="month"></select>
+        <select id="year"></select>
+    </div>
+
+    <div class="cost-box">
+        <input type="number" id="mealCost" placeholder="Cost per meal">
+    </div>
+
+    <div class="calendar" id="calendar"></div>
+
+    <div class="total">
+        Meals: <span id="totalMeals">0</span><br>
+        Total Cost: ৳<span id="totalCost">0</span>
+    </div>
+
+    <div class="actions">
+        <button class="whole" onclick="selectWholeMonth()">Select Whole Month</button>
+        <button class="csv" onclick="exportCSV()">Export CSV</button>
+        <button class="pdf" onclick="exportPDF()">Export PDF</button>
+        <button class="clear" onclick="clearMonth()">Clear Month</button>
+    </div>
+
+    <canvas id="mealChart" height="180"></canvas>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <h3 id="modalTitle"></h3>
+        <label><input type="checkbox" id="lunch"> Lunch</label><br>
+        <label><input type="checkbox" id="dinner"> Dinner</label><br><br>
+        <button onclick="saveDay()">Save</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
